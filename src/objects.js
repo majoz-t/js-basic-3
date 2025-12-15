@@ -17,11 +17,29 @@ peopleAge(36);
 console.log(people1.edad);
 
 3//
-/*function newPropety(mainObject, chainText){
+let mainObject={
+    nombre: "Ismael",
+    edad: 37,
+    altura: 1.87,
+}
+const chainText= "peso"
+function newPropety(mainObject, chainText){
     mainObject[chainText]=null;
+    console.log(mainObject);
 }
-const mainObject={
-    
+newPropety(mainObject, chainText);
+
+4//
+const propetyOut= "edad";
+function deletePropety(mainObject,propetyOut){
+    delete mainObject[propetyOut];
+    console.log(mainObject);
 }
-//const chainText="con jardín";
-newPropety(mainObject, chainText);*/
+deletePropety(mainObject,propetyOut);
+
+5//
+function quantityProp(mainObject){
+    return Object.keys(mainObject).length;
+}
+const total= quantityProp(mainObject);
+console.log(total);
